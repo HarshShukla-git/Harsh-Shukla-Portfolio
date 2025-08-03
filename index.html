@@ -1,200 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Harsh Shukla</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="hero-section">
-      <div class="container">
-        <h1 class="hero-title">Harsh Shukla</h1>
-        <p class="hero-subtitle">SDET | Azure Certified Associate</p>
-        <img
-          src="images/Harsh Shukla Image.jpg"
-          alt="Portrait of Harsh Shukla"
-          class="hero-image"
-        />
-        <a href="#projects" class="btn-primary">View Projects</a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Shukla Portfolio</title>
+  <meta name="description" content="Portfolio of Harsh Shukla – SDET, Azure Certified Associate, RPA & Automation Specialist."/>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet"/>
 
-    <nav class="navbar">
+  <!-- Your External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container" style="flex-direction:row;justify-content:space-between;">
+      <h2 style="color:#dedaf7;margin:0;font-size:1.1rem;letter-spacing:2px;">HARSH</h2>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="home">
+    <div class="container">
+      <img src="images/Harsh-Shukla-Image.jpg" alt="Portrait of Harsh Shukla" class="hero-image" />
+      <h1 class="hero-title">Harsh Shukla</h1>
+      <p class="hero-subtitle">SDET &bull; Azure Certified Associate</p>
+      <a href="#projects" class="btn-primary">View Projects</a>
+    </div>
+  </header>
+  
+  <main>
+    <!-- About Me -->
+    <section id="about" class="about-section">
       <div class="container">
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm <strong>Harsh Shukla</strong>, a detail-oriented <strong>SDET</strong> with 2.4+ years of experience in automation, API, RPA, and functional testing. I’m adept at designing scalable test frameworks, CI/CD integration, and backend validations. As a Microsoft Azure Certified Administrator, I have led high-impact releases across 20+ projects, with strong client-handling abilities. Also an author, philosopher, and nature enthusiast.
+        </p>
+        <p>
+          Check out my work on <a href="https://github.com/HarshShukla-git" target="_blank"><strong>GitHub</strong></a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+          <li><b>RPA & Automation:</b> UiPath Studio, Selenium</li>
+          <li><b>Programming:</b> Java, JavaScript, VBScript, C</li>
+          <li><b>DevOps:</b> Jenkins, Azure DevOps, GitHub</li>
+          <li><b>API Testing:</b> Postman, RestAssured</li>
+          <li><b>Frameworks:</b> Page Object Model, BDD (Cucumber)</li>
         </ul>
       </div>
-    </nav>
+    </section>
 
-    <main>
-      <!-- About Section -->
-      <section id="about" class="about-section">
-        <div class="container">
-          <h2>About Me</h2>
-          <p>
-            Hi, I'm <strong>Harsh Shukla</strong>. A detail-oriented SDET with
-            2.4+ years of experience in automation, API, RPA, and functional
-            testing. Adept at designing scalable test frameworks, integrating
-            CI/CD pipelines, and executing backend validations. I am a
-            Microsoft Azure Certified Administrator with strong client-handling
-            experience, delivering high-impact releases across 20+
-            applications. Outside of work, I am a writer and philosopher, the
-            author of two books, and a nature enthusiast.
-          </p>
-          <p>
-            Check out my projects on
-            <a href="https://github.com/HarshShukla-git" target="_blank"
-              ><strong>GitHub</strong></a
-            >.
-          </p>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="skills-section">
-        <div class="container">
-          <h2>My Skills</h2>
-          <ul class="skills-list">
-            <li><strong>RPA & Automation:</strong> UiPath Studio, Selenium</li>
-            <li><strong>Programming:</strong> Java, JavaScript, VBScript, C</li>
-            <li><strong>DevOps:</strong> Jenkins, Azure DevOps, GitHub</li>
-            <li><strong>API Testing:</strong> Postman, RestAssured</li>
-            <li>
-              <strong>Frameworks:</strong> Page Object Model, BDD with Cucumber
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Portfolio Section -->
-      <section id="projects" class="portfolio-section">
-        <div class="container">
-          <h2>My Projects</h2>
-          <div class="projects-grid">
-            <article class="project-card">
-              <img
-                src="images/project-1.jpg"
-                alt="Screenshot of Responsive Website project"
-              />
-              <h3>Responsive Website</h3>
-              <p>HTML / CSS</p>
-              <a
-                href="https://harsh-shukla-project-1.netlify.app"
-                target="_blank"
-                class="btn-secondary"
-                >View Project</a
-              >
-            </article>
-            <article class="project-card">
-              <img
-                src="images/project-1.jpg"
-              />
-              <h3>Calculator App</h3>
-              <p>HTML / CSS / JavaScript</p>
-              <a
-                href="https://harsh-shukla-project-2.netlify.app"
-                target="_blank"
-                class="btn-secondary"
-                >View Project</a
-              >
-            </article>
-            <article class="project-card">
-               <img
-                src="images/project-1.jpg"
-              />
-              <h3>Game</h3>
-              <p>HTML / CSS / JavaScript</p>
-              <a
-                href="https://harsh-shukla-project-3.netlify.app"
-                target="_blank"
-                class="btn-secondary"
-                >View Project</a
-              >
-            </article>
-            <!-- Add more project cards as needed -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <h2>Contact Me</h2>
-          <p>
-            <strong>Phone:</strong> 9580977808 <br />
-            <strong>Email:</strong> harsh2917.hs@gmail.com <br />
-            <strong>Address:</strong> Mohaddipur, Gorakhpur, India
-          </p>
-          <form class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" />
-
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your email"
-            />
-
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your message"
-            ></textarea>
-
-            <button type="submit" class="btn-primary">Submit</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
+    <!-- Projects / Portfolio -->
+    <section id="projects" class="portfolio-section">
       <div class="container">
-        <p>&copy; 2025 Harsh Shukla. All Rights Reserved.</p>
-        <ul class="social-links">
-          <li>
-            <a href="https://github.com/HarshShukla-git" target="_blank"
-              ><i class="fab fa-github"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/harsh-shukla-06262220b/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/harsh.shukla.984991/"
-              target="_blank"
-              ><i class="fab fa-facebook"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/bramhwansi_harsh_shukla/"
-              target="_blank"
-              ><i class="fab fa-instagram"></i></a
-            >
-          </li>
-        </ul>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="images/project-responsive.jpg" alt="Screenshot of Responsive Website"/>
+            <h3>Responsive Website</h3>
+            <p>HTML &bull; CSS</p>
+            <a href="https://harsh-shukla-project-1.netlify.app" target="_blank" class="btn-secondary">Live Demo</a>
+          </article>
+          <article class="project-card">
+            <img src="images/project-calculator.jpg" alt="Screenshot of Calculator App"/>
+            <h3>Calculator App</h3>
+            <p>HTML &bull; CSS &bull; JavaScript</p>
+            <a href="https://harsh-shukla-project-2.netlify.app" target="_blank" class="btn-secondary">Live Demo</a>
+          </article>
+          <article class="project-card">
+            <img src="images/project-game.jpg" alt="Screenshot of Game"/>
+            <h3>Game</h3>
+            <p>HTML &bull; CSS &bull; JavaScript</p>
+            <a href="https://harsh-shukla-project-3.netlify.app" target="_blank" class="btn-secondary">Live Demo</a>
+          </article>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          <b>Phone:</b> 9580977808 <br/>
+          <b>Email:</b> harsh2917.hs@gmail.com <br/>
+          <b>Address:</b> Mohaddipur, Gorakhpur, India
+        </p>
+        <form class="contact-form" autocomplete="off">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required/>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required/>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Harsh Shukla. All Rights Reserved.</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/HarshShukla-git" target="_blank"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/harsh.shukla.984991/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
 </html>
