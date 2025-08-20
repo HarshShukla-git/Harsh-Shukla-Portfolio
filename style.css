@@ -230,3 +230,112 @@ h2 {
   .projects-grid { grid-template-columns: 1fr; }
   header.hero-section { padding: 2.5rem 0 1.2rem 0;}
 }
+/* Base Styles remain as you provided */
+
+/* Additional Responsive Styles */
+
+/* Tablets and small desktops: width up to 1024px */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
+  .project-card img {
+    max-height: 120px;
+  }
+  .skills-list {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile landscape and larger phones: width up to 700px */
+@media (max-width: 700px) {
+  .container {
+    width: 96%;
+  }
+  .hero-title {
+    font-size: 2.05rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .nav-links {
+    /* Stack nav links vertically */
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .nav-links li {
+    text-align: center;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Vertical stack */
+  }
+  .project-card img {
+    max-height: 200px;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    padding: 1.5rem 1rem;
+  }
+  header.hero-section {
+    padding: 2.5rem 0 1.2rem 0;
+  }
+}
+
+/* Small phones and very narrow devices: width up to 450px */
+@media (max-width: 450px) {
+  body {
+    font-size: 14px; /* Slightly smaller base font */
+  }
+  .hero-title {
+    font-size: 1.7rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .btn-primary, .btn-secondary {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  .nav-links {
+    gap: 0.6rem;
+  }
+  .contact-form {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+  .project-card img {
+    max-height: 150px;
+  }
+}
+
+/* Navigation improvements: make hamburger menu for very small width (optional) */
+@media (max-width: 500px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    display: none; /* Hide nav links by default - you can add JS toggle for hamburger */
+    flex-direction: column;
+    width: 100%;
+  }
+  /* You can add a hamburger menu icon here and JS to toggle nav-links */
+}
+
