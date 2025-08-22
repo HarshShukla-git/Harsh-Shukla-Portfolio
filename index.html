@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- progress bar -->
   <div id="progress-bar" aria-hidden="true"></div>
 
@@ -33,12 +32,12 @@
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
 
-        <ul class="nav-list">
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
+        <ul class="nav-list" role="menubar">
+          <li><a class="nav-link" role="menuitem" href="#about">About</a></li>
+          <li><a class="nav-link" role="menuitem" href="#experience">Experience</a></li>
+          <li><a class="nav-link" role="menuitem" href="#projects">Projects</a></li>
+          <li><a class="nav-link" role="menuitem" href="#skills">Skills</a></li>
+          <li><a class="nav-link" role="menuitem" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -59,6 +58,7 @@
         <div class="hero-info">
           <h1 id="hero-title" class="name">Harsh Shukla <span class="muted">— SDET @ Cognizant</span></h1>
           <p class="lead">SDET with ~3 years’ experience across Automation, API & RPA testing in healthcare and enterprise systems. I build reliable automation, scale test suites, and reduce release risk.</p>
+
           <div class="hero-actions">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn ghost" href="Harsh Shukla Resume - SDET.pdf" download>Download CV</a>
@@ -73,7 +73,7 @@
       </div>
     </section>
 
-    <!-- MAIN GRID (centered single-column feel on wide screens) -->
+    <!-- MAIN GRID -->
     <div class="content-grid">
       <div class="primary-col">
         <!-- ABOUT -->
@@ -82,18 +82,41 @@
           <p>I’m a Software Development Engineer in Test (SDET) with ~3 years of professional experience (2.9 years + 11-month internship) in Automation, API, Functional, and RPA testing. I bring healthcare domain knowledge: claims, facts validation, and compliance. I work with Selenium, RestAssured, UiPath, SQL and CI/CD pipelines.</p>
         </section>
 
-        <!-- EXPERIENCE -->
+        <!-- EXPERIENCE (expanded & improved layout) -->
         <section id="experience" class="card section" aria-labelledby="exp-heading">
           <h2 id="exp-heading">Experience</h2>
-          <div class="timeline">
+
+          <div class="timeline-grid">
             <article class="timeline-item">
-              <div class="t-left"><strong>Cognizant Technology Solutions</strong><div class="period">Associate — Dec 2022 – Present</div></div>
-              <div class="t-right">Architected hybrid automation frameworks (Selenium/TestNG), built REST API suites, validated UiPath bots, and implemented SQL-based verification tests.</div>
+              <div class="t-left">
+                <strong>Cognizant Technology Solutions</strong>
+                <div class="period">Associate — Dec 2022 – Present</div>
+              </div>
+              <div class="t-right">
+                <p><strong>Role:</strong> SDET — Automation & RPA</p>
+                <p><strong>Highlights:</strong> Architected hybrid automation frameworks using Selenium & TestNG, introduced data-driven patterns and parallel execution to cut regression time ~30%. Built robust REST API test suites using RestAssured including contract & negative tests. Led UiPath bot validations (Studio & Orchestrator), integrated SQL-based end-to-end checks, and coordinated QA releases with cross-functional teams using JIRA and Azure pipelines.</p>
+                <p><strong>Impact:</strong> Improved release confidence, reduced manual regression effort, and increased test coverage across 10+ healthcare apps.</p>
+              </div>
             </article>
 
             <article class="timeline-item">
-              <div class="t-left"><strong>Bytexus Software Solutions</strong><div class="period">Full Stack Intern — Jun 2022 – Nov 2022</div></div>
-              <div class="t-right">Built responsive UI, integrated REST APIs, and improved front-end performance.</div>
+              <div class="t-left">
+                <strong>Bytexus Software Solutions</strong>
+                <div class="period">Full Stack Developer Intern — Jun 2022 – Nov 2022</div>
+              </div>
+              <div class="t-right">
+                <p>Built full-stack features using React and Node.js, improved UI responsiveness by 25%, and collaborated on API integration and database design. Implemented unit and integration tests to stabilize releases.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="t-left">
+                <strong>Cognizant Technology Solutions</strong>
+                <div class="period">Healthcare QA Intern — Jan 2022 – Jun 2022</div>
+              </div>
+              <div class="t-right">
+                <p>Executed automation and manual test cases for claims processing (Facets), performed database validations and defect triage, and verified release readiness across multiple environments.</p>
+              </div>
             </article>
           </div>
         </section>
@@ -130,64 +153,3 @@
         </section>
 
         <!-- SKILLS -->
-        <section id="skills" class="card section" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Skills & Tools</h2>
-          <div class="skills">
-            <span class="skill">Selenium WebDriver</span>
-            <span class="skill">TestNG / JUnit</span>
-            <span class="skill">RestAssured / Postman</span>
-            <span class="skill">UiPath Studio & Orchestrator</span>
-            <span class="skill">Java / JavaScript</span>
-            <span class="skill">SQL / MySQL</span>
-            <span class="skill">Azure DevOps / Jenkins</span>
-            <span class="skill">JIRA / ALM</span>
-          </div>
-        </section>
-
-        <!-- ACHIEVEMENTS -->
-        <section id="achievements" class="card section" aria-labelledby="ach-heading">
-          <h2 id="ach-heading">Achievements</h2>
-          <ul class="bullets">
-            <li>Microsoft Certified: Azure Administrator Associate — 2024</li>
-            <li>OCI AI Foundations 2025 Associate (1Z0-1122-25)</li>
-            <li>6 NPTEL Certifications (IITs)</li>
-            <li>QA Excellence recognitions at Cognizant</li>
-          </ul>
-        </section>
-      </div>
-
-      <!-- ASIDE -->
-      <aside class="aside-col">
-        <div class="card contact-card">
-          <h3>Contact</h3>
-          <div class="contact-list">
-            <div><strong>Email:</strong> <a class="link" href="mailto:harsh2917.hs@gmail.com">harsh2917.hs@gmail.com</a></div>
-            <div><strong>Phone:</strong> <a class="link" href="tel:+919580977808">+91 95809 77808</a></div>
-            <div><strong>Location:</strong> Delhi, India</div>
-            <a class="btn primary block" href="Harsh Shukla Resume - SDET.pdf" download>Download Resume</a>
-          </div>
-        </div>
-
-        <div class="card social-card">
-          <h3>Social</h3>
-          <div class="socials">
-            <a class="social" href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a class="social" href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a class="social" href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>&copy; 2025 Harsh Shukla — Built for clarity & speed.</p>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
-</html>
