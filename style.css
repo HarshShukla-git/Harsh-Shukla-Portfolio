@@ -265,6 +265,41 @@ h2{ margin:0 0 1rem 0; color: #3a3a9b; font-size:1.8rem; letter-spacing:0.6px; }
 /* accessible sr-only */
 .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
 
+/* ---------- EXPERIENCE TIMELINE ---------- */
+.timeline{ display:flex; flex-direction:column; gap:1.2rem; }
+.entry{ display:flex; flex-direction:column; gap:0.3rem; }
+.entry .role{ font-weight:700; color:#2b2b70; font-size:1.05rem; }
+.entry .company{ font-weight:600; color:var(--muted); }
+.entry .period{ font-size:0.9rem; color:var(--muted); }
+.bullets{ margin:0.4rem 0 0 1rem; color:var(--muted); line-height:1.5; }
+.bullets li{ margin-bottom:0.3rem; }
+
+/* ---------- THEME TOGGLE BUTTON ---------- */
+.toggle-theme{
+  padding:0.5rem 1rem;
+  border:none;
+  border-radius:8px;
+  background: var(--accent);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition: transform 0.25s;
+}
+.toggle-theme:hover{ transform: scale(1.05); }
+
+/* ---------- RESUME DOWNLOAD BUTTON ---------- */
+.download{
+  display:inline-block;
+  padding:0.7rem 1.4rem;
+  border-radius:12px;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.download:hover{ transform: translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px){
   .hero-grid{ grid-template-columns: 140px 1fr; gap:18px }
