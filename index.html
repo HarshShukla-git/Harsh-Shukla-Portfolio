@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harsh Shukla — SDET | Automation & RPA</title>
+  <title>Harsh Shukla — SDET Portfolio</title>
   <meta name="description" content="Harsh Shukla — SDET, Automation, API testing, RPA (UiPath). Portfolio." />
 
-  <!-- Fonts & Icons -->
+  <!-- Font + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous"/>
 
-  <!-- Main stylesheet -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,94 +21,89 @@
   <!-- back to top -->
   <button id="back-to-top" aria-label="Back to top">↑</button>
 
-  <!-- NAV -->
-  <header class="site-header" role="banner">
-    <div class="container nav-row">
-      <div class="brand-row" style="display:flex;align-items:center;gap:14px;">
-        <h1 class="brand">HARSH SHUKLA</h1>
-        <div class="small-socials" aria-hidden="true">
-          <a href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" class="logo" aria-label="Home">Harsh<span class="logo-dot">.</span></a>
       </div>
 
-      <div class="nav-actions" style="display:flex;align-items:center;gap:10px;">
-        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+      <nav id="primary-navigation" class="nav" aria-label="Main navigation">
+        <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
 
-        <nav id="primary-navigation" class="nav" role="navigation" aria-label="Primary">
-          <ul class="nav-list">
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#experience">Experience</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-            <li><a class="resume-link" href="Harsh Shukla Resume - SDET.pdf" download>Download CV</a></li>
-          </ul>
-        </nav>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-        <button id="theme-toggle" class="toggle-theme" aria-pressed="false" title="Toggle theme">Theme</button>
+      <div class="controls">
+        <a class="icon-link" href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
       </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <main class="wrap">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="avatar" aria-hidden="true"><img src="profile.jpg" alt="Harsh Shukla — profile photo"></div>
-      <div class="hero-content">
-        <h2 id="hero-heading" class="hero-title">Harsh Shukla <span class="muted">— SDET @ Cognizant</span></h2>
-        <p class="hero-sub">Results-driven SDET with ~3 years in Automation, API, Functional & RPA testing (healthcare domain). Built 20+ enterprise releases.</p>
-
-        <div class="meta-inline" role="list">
-          <span class="pill">Delhi, India</span>
-          <a class="pill" href="mailto:harsh2917.hs@gmail.com">harsh2917.hs@gmail.com</a>
-          <a class="pill" href="tel:+919580977808">+91 95809 77808</a>
+  <main class="container main-center">
+    <section class="hero card" id="hero" aria-labelledby="hero-title">
+      <div class="hero-top">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Profile photo of Harsh Shukla">
         </div>
+        <div class="hero-info">
+          <h1 id="hero-title" class="name">Harsh Shukla <span class="muted">— SDET @ Cognizant</span></h1>
+          <p class="lead">SDET with ~3 years’ experience across Automation, API & RPA testing in healthcare and enterprise systems. I build reliable automation, scale test suites, and reduce release risk.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="Harsh Shukla Resume - SDET.pdf" download>Download CV</a>
+          </div>
 
-        <nav class="hero-nav" aria-label="quick links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+          <div class="meta">
+            <span class="pill">Delhi, India</span>
+            <a class="pill" href="mailto:harsh2917.hs@gmail.com">harsh2917.hs@gmail.com</a>
+            <a class="pill" href="tel:+919580977808">+91 95809 77808</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- LEFT / MAIN COLUMN -->
-    <div class="main-grid">
+    <!-- MAIN GRID (centered single-column feel on wide screens) -->
+    <div class="content-grid">
       <div class="primary-col">
         <!-- ABOUT -->
         <section id="about" class="card section" aria-labelledby="about-heading">
-          <h3 id="about-heading">About</h3>
-          <p>I’m a Software Development Engineer in Test (SDET) with ~3 years of professional experience (2.9 years + 11-month internship) in Automation, API, Functional, and RPA testing. Strong healthcare domain expertise: claims processing, facts validation, regulatory compliance. Skilled in Selenium, RestAssured, UiPath, SQL, and Agile QA.</p>
+          <h2 id="about-heading">About</h2>
+          <p>I’m a Software Development Engineer in Test (SDET) with ~3 years of professional experience (2.9 years + 11-month internship) in Automation, API, Functional, and RPA testing. I bring healthcare domain knowledge: claims, facts validation, and compliance. I work with Selenium, RestAssured, UiPath, SQL and CI/CD pipelines.</p>
         </section>
 
         <!-- EXPERIENCE -->
         <section id="experience" class="card section" aria-labelledby="exp-heading">
-          <h3 id="exp-heading">Experience</h3>
+          <h2 id="exp-heading">Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="t-left"><strong>Cognizant Technology Solutions</strong><div class="period">Associate — Dec 2022 – Present</div></div>
+              <div class="t-right">Architected hybrid automation frameworks (Selenium/TestNG), built REST API suites, validated UiPath bots, and implemented SQL-based verification tests.</div>
+            </article>
 
-          <article class="timeline-entry">
-            <div class="meta">
-              <strong>Cognizant Technology Solutions</strong>
-              <span class="period">Associate — Dec 2022 – Present</span>
-            </div>
-            <div class="desc">Associate — SDET / Automation & RPA. Architected automation frameworks (Selenium/TestNG), built REST API suites, validated UiPath bots, and performed backend data checks using SQL.</div>
-          </article>
-
-          <article class="timeline-entry">
-            <div class="meta">
-              <strong>Bytexus Software Solutions</strong>
-              <span class="period">Full Stack Developer Intern — Jun 2022 – Nov 2022</span>
-            </div>
-            <div class="desc">Built responsive UI and integrated REST APIs. Improved performance and cross-browser stability.</div>
-          </article>
+            <article class="timeline-item">
+              <div class="t-left"><strong>Bytexus Software Solutions</strong><div class="period">Full Stack Intern — Jun 2022 – Nov 2022</div></div>
+              <div class="t-right">Built responsive UI, integrated REST APIs, and improved front-end performance.</div>
+            </article>
+          </div>
         </section>
 
         <!-- PROJECTS -->
         <section id="projects" class="card section" aria-labelledby="projects-heading">
-          <h3 id="projects-heading">Selected Projects</h3>
+          <h2 id="projects-heading">Selected Projects</h2>
 
-          <div class="filter-controls" role="tablist" aria-label="Project filters">
-            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="automation">Automation</button>
             <button class="filter-btn" data-filter="rpa">RPA</button>
           </div>
@@ -116,29 +111,27 @@
           <div class="projects-grid">
             <article class="project-card" data-category="automation">
               <img src="images/project-1.jpg" alt="Advance - Bankist screenshot">
-              <h4>Advance — Bankist (DOM)</h4>
-              <p>DOM-based banking simulation with real-time calculations.</p>
-              <p class="muted"><a class="link" href="https://advance-dom.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
+              <h3>Advance — Bankist (DOM)</h3>
+              <p class="muted">DOM-based banking simulation with realtime calculations. <a class="link" href="https://advance-dom.netlify.app" target="_blank" rel="noopener">Live</a></p>
             </article>
 
             <article class="project-card" data-category="automation">
               <img src="images/project 2 i.jpg" alt="PlayWithText screenshot">
-              <h4>PlayWithText App</h4>
-              <p>React app for real-time text transformations.</p>
-              <p class="muted"><a class="link" href="https://playwithtext.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
+              <h3>PlayWithText App</h3>
+              <p class="muted">React-based text transformation tool. <a class="link" href="https://playwithtext.netlify.app" target="_blank" rel="noopener">Live</a></p>
             </article>
 
             <article class="project-card" data-category="rpa">
-              <img src="images/invoice-bot.jpg" alt="Invoice bot screenshot">
-              <h4>Invoice Bot (UiPath)</h4>
-              <p>Automated invoice extraction and posting workflow with validations.</p>
+              <img src="images/invoice-bot.jpg" alt="Invoice Bot screenshot">
+              <h3>Invoice Bot (UiPath)</h3>
+              <p class="muted">Automated invoice extraction and GL posting with validation rules.</p>
             </article>
           </div>
         </section>
 
         <!-- SKILLS -->
         <section id="skills" class="card section" aria-labelledby="skills-heading">
-          <h3 id="skills-heading">Skills & Tools</h3>
+          <h2 id="skills-heading">Skills & Tools</h2>
           <div class="skills">
             <span class="skill">Selenium WebDriver</span>
             <span class="skill">TestNG / JUnit</span>
@@ -153,34 +146,34 @@
 
         <!-- ACHIEVEMENTS -->
         <section id="achievements" class="card section" aria-labelledby="ach-heading">
-          <h3 id="ach-heading">Certifications & Achievements</h3>
+          <h2 id="ach-heading">Achievements</h2>
           <ul class="bullets">
             <li>Microsoft Certified: Azure Administrator Associate — 2024</li>
             <li>OCI AI Foundations 2025 Associate (1Z0-1122-25)</li>
             <li>6 NPTEL Certifications (IITs)</li>
-            <li>QA Excellence — internal recognitions</li>
+            <li>QA Excellence recognitions at Cognizant</li>
           </ul>
         </section>
       </div>
 
-      <!-- RIGHT / ASIDE -->
+      <!-- ASIDE -->
       <aside class="aside-col">
         <div class="card contact-card">
-          <h4>Contact & Links</h4>
+          <h3>Contact</h3>
           <div class="contact-list">
             <div><strong>Email:</strong> <a class="link" href="mailto:harsh2917.hs@gmail.com">harsh2917.hs@gmail.com</a></div>
             <div><strong>Phone:</strong> <a class="link" href="tel:+919580977808">+91 95809 77808</a></div>
             <div><strong>Location:</strong> Delhi, India</div>
-            <div style="margin-top:8px;"><a class="download" href="Harsh Shukla Resume - SDET.pdf" download>Download Resume (PDF)</a></div>
+            <a class="btn primary block" href="Harsh Shukla Resume - SDET.pdf" download>Download Resume</a>
           </div>
         </div>
 
-        <div class="card social-card" aria-label="Social links">
-          <h4>Social</h4>
-          <div class="social-links">
-            <a class="social-link" href="https://github.com/HarshShukla-git" target="_blank" rel="noopener"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
-            <a class="social-link" href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
-            <a class="social-link" href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+        <div class="card social-card">
+          <h3>Social</h3>
+          <div class="socials">
+            <a class="social" href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a class="social" href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a class="social" href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </aside>
@@ -189,12 +182,12 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Harsh Shukla — Built with modern web standards.</p>
+    <div class="container footer-inner">
+      <p>&copy; 2025 Harsh Shukla — Built for clarity & speed.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
