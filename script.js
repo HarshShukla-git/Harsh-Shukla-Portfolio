@@ -1,11 +1,17 @@
-// ====== Theme toggle (persist) ======
+// ====== Theme toggle (persist + system fallback) ======
 const themeToggle = document.getElementById('theme-toggle');
-const saved = localStorage.getItem('theme');
-if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+const savedTheme = localStorage.getItem('theme');
+
+// If user previously saved a preference, apply it; otherwise apply system preference (dark)
+if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+} else {
+  document.documentElement.removeAttribute('data-theme');
+}
 
 function renderThemeButton() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  themeToggle.innerHTML = isDark ? '<i class=\"fas fa-sun\"></i>' : '<i class=\"fas fa-moon\"></i>';
   themeToggle.setAttribute('aria-pressed', String(isDark));
 }
 renderThemeButton();
@@ -14,7 +20,7 @@ themeToggle.addEventListener('click', () => {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   if (isDark) {
     document.documentElement.removeAttribute('data-theme');
-    localStorage.removeItem('theme');
+    localStorage.setItem('theme', 'light');
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
@@ -41,17 +47,17 @@ navLinks.forEach(link => {
     const id = link.getAttribute('href');
     const target = document.querySelector(id);
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (navList.classList.contains('open')) navList.classList.remove('open');
+    if (navList && navList.classList.contains('open')) navList.classList.remove('open');
     navToggle.setAttribute('aria-expanded','false');
   });
 });
 
+// Use sections (with ids) for highlighting - includes main cards/sections
 const sections = document.querySelectorAll('main .section, main section.card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // highlight nav
       const id = entry.target.id;
       if (id) {
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
