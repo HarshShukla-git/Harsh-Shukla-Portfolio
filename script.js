@@ -2,7 +2,7 @@
 const themeToggle = document.getElementById('theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 
-// If user previously saved a preference, apply it; otherwise apply system preference (dark)
+// apply theme: if saved === 'dark' OR (no saved and system prefers dark) => dark, else light (no attribute)
 if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.setAttribute('data-theme', 'dark');
 } else {
@@ -11,7 +11,7 @@ if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMe
 
 function renderThemeButton() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  themeToggle.innerHTML = isDark ? '<i class=\"fas fa-sun\"></i>' : '<i class=\"fas fa-moon\"></i>';
+  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun" aria-hidden="true"></i>' : '<i class="fas fa-moon" aria-hidden="true"></i>';
   themeToggle.setAttribute('aria-pressed', String(isDark));
 }
 renderThemeButton();
@@ -19,9 +19,11 @@ renderThemeButton();
 themeToggle.addEventListener('click', () => {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   if (isDark) {
+    // switch to light
     document.documentElement.removeAttribute('data-theme');
     localStorage.setItem('theme', 'light');
   } else {
+    // switch to dark
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
   }
