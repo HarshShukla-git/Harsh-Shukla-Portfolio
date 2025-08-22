@@ -8,123 +8,78 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Harsh Shukla — SDET | Automation & RPA" />
-  <meta property="og:description" content="Results-driven SDET with 3+ years’ experience in Automation, API, Functional, and RPA testing. Delivered 20+ enterprise releases with zero production defects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="./" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="style.css" />
   <meta name="twitter:card" content="summary" />
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#94a3b8;
-      --accent:#06b6d4;
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
-      --max-w:1100px;
-      --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    [data-theme="light"]{
-      --bg:#f7fbff; --card:#ffffff; --muted:#475569; --accent:#0ea5a4; --glass: rgba(15,23,42,0.04);
-      color:#1e293b;
-    }
-    *{box-sizing:border-box;transition:background 0.3s,color 0.3s}
-    html,body{height:100%;margin:0;font-family:var(--ff);background:linear-gradient(180deg,var(--bg), #071126 60%);color: #e6eef8;scroll-behavior:smooth}
-    a{color:var(--accent);text-decoration:none;transition:color 0.3s, transform 0.3s}
-    a:hover{color:#fff;transform:translateY(-2px)}
-    .wrap{max-width:var(--max-w);margin:32px auto;padding:20px}
-    header{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-    .avatar{width:108px;height:108px;border-radius:16px;flex:0 0 108px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.4);transition:transform 0.4s}
-    .avatar:hover{transform:scale(1.05)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    .hero{flex:1;min-width:260px}
-    .title{font-size:20px;font-weight:800;margin:0}
-    .subtitle{margin:6px 0 0;color:var(--muted);font-weight:600}
-    .meta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
-    .pill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px;transition:background 0.3s, transform 0.3s}
-    .pill:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
-    nav{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
-    nav a{padding:8px 10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);transition:background 0.3s, transform 0.3s}
-    nav a:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
-
-    main{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:26px}
-    @media (max-width:920px){main{grid-template-columns:1fr} .avatar{width:84px;height:84px}}
-
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
-    section h2{margin:0 0 12px;font-size:16px}
-
-    .about p{color:var(--muted);line-height:1.55;margin:0}
-
-    .timeline{display:flex;flex-direction:column;gap:14px}
-    .entry{display:flex;gap:14px}
-    .entry .meta{min-width:140px;color:var(--muted);font-size:13px}
-    .entry .body{flex:1}
-    .entry .role{font-weight:700}
-    .bullets{margin:8px 0 0;padding-left:16px;color:var(--muted)}
-    .bullets li{margin-bottom:6px}
-
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted);font-size:13px;transition:transform 0.3s, background 0.3s}
-    .skill:hover{background:var(--accent);color:#fff;transform:scale(1.05)}
-
-    aside .card + .card{margin-top:18px}
-    .contact-list{display:flex;flex-direction:column;gap:8px}
-    .small{font-size:13px;color:var(--muted)}
-
-    footer{margin:36px 0 80px;color:var(--muted);text-align:center}
-
-    .download{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:#022; font-weight:700;transition:transform 0.3s, box-shadow 0.3s}
-    .download:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.4)}
-
-    .toggle-theme{margin-left:auto;padding:6px 12px;font-size:13px;border:none;border-radius:8px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;transition:transform 0.3s}
-    .toggle-theme:hover{transform:scale(1.05)}
-
-    .visible{opacity:1 !important;transform:translateY(0) !important}
-
-    /* Progress bar */
-    #progress-bar{position:fixed;top:0;left:0;height:4px;background:var(--accent);width:0%;z-index:9999;transition:width 0.25s ease-out}
-
-    /* Back to top button */
-    #back-to-top{position:fixed;bottom:24px;right:24px;background:var(--accent);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.4);transition:transform 0.3s,opacity 0.3s}
-    #back-to-top:hover{transform:scale(1.1)}
-    /* small helpers */
-    .muted { color: var(--muted); font-size:13px; }
-    .link { color: var(--accent); text-decoration:underline; }
-  </style>
 </head>
 <body>
+  <!-- Progress bar -->
   <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- Back to top -->
   <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
 
   <div class="wrap">
-    <header>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container nav-row">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <h2 class="brand">HARSH SHUKLA</h2>
+
+          <!-- social icons in header (small) -->
+          <ul class="social-header" aria-hidden="true" style="display:flex;gap:10px;margin:0;padding:0;list-style:none;">
+            <li><a href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+
+          <ul id="primary-navigation" class="nav-links" role="menubar">
+            <li role="none"><a role="menuitem" href="#about" class="nav-link">About</a></li>
+            <li role="none"><a role="menuitem" href="#experience" class="nav-link">Experience</a></li>
+            <li role="none"><a role="menuitem" href="#projects" class="nav-link">Projects</a></li>
+            <li role="none"><a role="menuitem" href="#skills" class="nav-link">Skills</a></li>
+            <li role="none"><a role="menuitem" href="#achievements" class="nav-link">Achievements</a></li>
+            <li role="none"><a role="menuitem" href="#contact" class="nav-link">Contact</a></li>
+            <li role="none"><a class="resume-link" href="Harsh Shukla Resume - SDET.pdf" download>Download CV</a></li>
+          </ul>
+
+          <button class="toggle-theme" onclick="toggleTheme()" aria-pressed="false" title="Toggle theme">Theme</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER HERO -->
+    <header style="margin-top:18px; display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
       <div class="avatar"><img src="profile.jpg" alt="Profile photo of Harsh Shukla" /></div>
       <div class="hero">
         <h1 class="title">Harsh Shukla <span style="font-weight:600;color:var(--muted);font-size:15px">— SDET @ Cognizant</span></h1>
-        <div class="subtitle">Results-driven SDET with 3+ years of comprehensive experience in automation testing, API validation, and RPA development within healthcare and IT domains. Proven expertise in reducing regression cycle time by 30% and delivering 20+ enterprise releases with zero production defects.</div>
-        <div class="meta">
+        <div class="subtitle">Results-driven SDET with 3+ years of comprehensive experience in automation testing, API validation, and RPA development within healthcare and IT domains.</div>
+
+        <div class="meta" style="margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
           <div class="pill">Delhi, India</div>
           <a href="mailto:harsh2917.hs@gmail.com" class="pill">harsh2917.hs@gmail.com</a>
           <a href="tel:+919580977808" class="pill">+91 95809 77808</a>
-          <a href="https://github.com/HarshShukla-git" class="pill">GitHub</a>
-          <a href="https://harsh-shukla-portfolio.netlify.app/" class="pill">Portfolio</a>
         </div>
-        <nav aria-label="primary">
+
+        <nav aria-label="primary" style="margin-top:12px;">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#contact">Contact</a>
         </nav>
       </div>
-      <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
       <!-- LEFT COLUMN -->
       <div>
-        <!-- About -->
+        <!-- ABOUT -->
         <section id="about" class="card" aria-labelledby="about-heading">
           <h2 id="about-heading">About</h2>
           <p class="about">
@@ -132,187 +87,200 @@
           </p>
         </section>
 
-        <!-- Experience -->
+        <!-- EXPERIENCE -->
         <section id="experience" class="card" aria-labelledby="exp-heading">
           <h2 id="exp-heading">Experience</h2>
 
           <div class="timeline">
             <article class="entry" aria-labelledby="role1">
-              <div class="meta muted">Cognizant Technology Solutions — Associate<br><span style="font-weight:600">Dec 2022 – Present</span></div>
+              <div class="meta">
+                <strong>Cognizant Technology Solutions</strong>
+                <span class="period">Associate — Dec 2022 – Present</span>
+              </div>
               <div class="body">
                 <div id="role1" class="role">Associate — SDET / Automation & RPA</div>
                 <ul class="bullets">
-                  <li>Architected and maintained hybrid automation frameworks using Selenium, TestNG, and UFT; reduced regression cycle time by ~30% across 10+ healthcare applications.</li>
-                  <li>Designed and executed REST API test suites (Postman, RestAssured, SoapUI) covering functional, negative, and boundary scenarios.</li>
-                  <li>Performed end-to-end RPA bot testing and validations (UiPath Studio & Orchestrator) for attended & unattended processes.</li>
-                  <li>Single-handed owner for automation, API & RPA testing across 10+ applications — ran client calls, daily QA sync-ups, and defect triage.</li>
-                  <li>Conducted complex SQL validations to ensure backend data integrity; tracked defects using JIRA/ALM.</li>
+                  <li>Architected hybrid automation frameworks using Selenium, TestNG and UFT; reduced regression cycle time by ~30% across 10+ healthcare apps.</li>
+                  <li>Designed REST API test suites (RestAssured, Postman, SoapUI) covering edge cases and integration scenarios.</li>
+                  <li>Owned RPA testing for UiPath bots (Studio & Orchestrator) and performed backend data validations using SQL.</li>
+                  <li>Managed defects in JIRA/ALM and coordinated QA releases with cross-functional teams.</li>
                 </ul>
               </div>
             </article>
 
             <article class="entry" aria-labelledby="role2">
-              <div class="meta muted">Bytexus Software Solutions — Full Stack Developer Intern<br><span style="font-weight:600">Jun 2022 – Nov 2022</span></div>
+              <div class="meta">
+                <strong>Bytexus Software Solutions</strong>
+                <span class="period">Full Stack Developer Intern — Jun 2022 – Nov 2022</span>
+              </div>
               <div class="body">
                 <div id="role2" class="role">Full Stack Developer Intern</div>
                 <ul class="bullets">
-                  <li>Built full-stack applications using React.js, Node.js, and MySQL; improved UI responsiveness and integrated REST APIs.</li>
-                  <li>Enhanced UI/UX performance by 25% through cross-browser compatibility and mobile-first design.</li>
+                  <li>Built full-stack apps using React.js, Node.js and MySQL; improved UI responsiveness and integrated REST APIs.</li>
+                  <li>Improved UI/UX performance by 25% through cross-browser fixes and responsive design.</li>
                 </ul>
               </div>
             </article>
 
             <article class="entry" aria-labelledby="role3">
-              <div class="meta muted">Cognizant Technology Solutions — Intern<br><span style="font-weight:600">Jan 2022 – Jun 2022</span></div>
+              <div class="meta">
+                <strong>Cognizant Technology Solutions</strong>
+                <span class="period">Healthcare QA Intern — Jan 2022 – Jun 2022</span>
+              </div>
               <div class="body">
                 <div id="role3" class="role">Healthcare QA Intern</div>
                 <ul class="bullets">
-                  <li>Executed automation and manual test cases for healthcare claims processing, facts validation, and compliance workflows (Facets).</li>
-                  <li>Conducted database testing, defect logging, and end-to-end release validation.</li>
+                  <li>Executed automation & manual test cases for claims processing and facts validation (Facets).</li>
+                  <li>Performed database testing, defect logging and release verification.</li>
                 </ul>
               </div>
             </article>
           </div>
         </section>
 
-        <!-- Projects -->
+        <!-- PROJECTS -->
         <section id="projects" class="card" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Selected Projects</h2>
-          <div class="timeline" style="gap:12px">
-            <article class="entry" style="align-items:flex-start">
-              <div class="meta muted">Advance Website</div>
-              <div class="body">
-                <div class="role">Advance - Bankist (DOM Manipulation)</div>
-                <p class="muted" style="margin:6px 0 0">A DOM-based banking simulation with real-time calculations, authentication simulation, and responsive UI. <a class="link" href="https://advance-dom.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
-              </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img src="images/project-1.jpg" alt="Advance Website screenshot"/>
+              <h3>Advance - Bankist (DOM)</h3>
+              <p class="muted">A DOM-based banking simulation with real-time calculations. <a class="link" href="https://advance-dom.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
             </article>
 
-            <article class="entry" style="align-items:flex-start">
-              <div class="meta muted">PlayWithText</div>
-              <div class="body">
-                <div class="role">PlayWithText App (React)</div>
-                <p class="muted" style="margin:6px 0 0">React app for text transformations, analytics, and performance-optimized UI. <a class="link" href="https://playwithtext.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
-              </div>
+            <article class="project-card">
+              <img src="images/project 2 i.jpg" alt="PlayWithText screenshot"/>
+              <h3>PlayWithText App</h3>
+              <p class="muted">React app for real-time text transformations. <a class="link" href="https://playwithtext.netlify.app" target="_blank" rel="noopener">Live demo</a></p>
             </article>
           </div>
         </section>
 
-        <!-- Skills -->
+        <!-- SKILLS -->
         <section id="skills" class="card" aria-labelledby="skills-heading">
           <h2 id="skills-heading">Skills & Tools</h2>
-          <div class="skills" style="margin-top:8px">
+          <div class="skills">
             <div class="skill">Selenium WebDriver</div>
-            <div class="skill">TestNG</div>
-            <div class="skill">JUnit</div>
-            <div class="skill">UFT</div>
-            <div class="skill">RestAssured</div>
-            <div class="skill">Postman</div>
-            <div class="skill">SoapUI</div>
-            <div class="skill">UiPath Studio</div>
-            <div class="skill">Azure DevOps</div>
-            <div class="skill">Jenkins</div>
+            <div class="skill">TestNG / JUnit</div>
+            <div class="skill">RestAssured / Postman</div>
+            <div class="skill">UiPath Studio & Orchestrator</div>
             <div class="skill">Java / JavaScript</div>
             <div class="skill">SQL / MySQL</div>
+            <div class="skill">Azure DevOps / Jenkins</div>
             <div class="skill">JIRA / ALM</div>
-            <div class="skill">Facets (Healthcare)</div>
           </div>
         </section>
 
-        <!-- Achievements & Certifications -->
+        <!-- ACHIEVEMENTS -->
         <section id="achievements" class="card" aria-labelledby="ach-heading">
           <h2 id="ach-heading">Certifications & Achievements</h2>
           <ul class="bullets" style="margin:0">
             <li>Microsoft Certified: Azure Administrator Associate — 2024</li>
-            <li>Oracle Certified Associate (OCA) & 4 Oracle Certifications</li>
-            <li>6 NPTEL Certifications (IITs) — Automation & Testing</li>
-            <li>QA Excellence Award — Cognizant (2025)</li>
-            <li>Raise the Bar & Doing the Right Thing Right Way — Cognizant (2024)</li>
-            <li>Brilliant Beginner — Cognizant (2023)</li>
-            <li>Delivered 20+ enterprise releases with multiple EVP-level appreciations; zero production defects across managed projects.</li>
+            <li>Oracle Certified Associate (OCA) & 4 Oracle certificates</li>
+            <li>6 NPTEL Certifications — IITs</li>
+            <li>QA Excellence & internal recognitions at Cognizant</li>
           </ul>
         </section>
       </div>
 
-      <!-- RIGHT COLUMN (aside) -->
+      <!-- RIGHT COLUMN / ASIDE -->
       <aside>
         <div class="card">
-          <h2>Contact & Quick Links</h2>
+          <h2>Contact & Links</h2>
           <div class="contact-list small">
             <div><strong>Email:</strong> <a href="mailto:harsh2917.hs@gmail.com" class="link">harsh2917.hs@gmail.com</a></div>
             <div><strong>Phone:</strong> <a href="tel:+919580977808" class="link">+91 95809 77808</a></div>
-            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" class="link">harsh-shukla-06262220b</a></div>
-            <div><strong>GitHub:</strong> <a href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" class="link">HarshShukla-git</a></div>
-            <div style="margin-top:8px"><a class="download" href="Harsh Shukla Resume - SDET.pdf" download>Download Resume (PDF)</a></div>
+            <div><strong>Location:</strong> Delhi, India</div>
+            <div style="margin-top:8px;"><a class="download" href="Harsh Shukla Resume - SDET.pdf" download>Download Resume (PDF)</a></div>
           </div>
         </div>
 
         <div class="card">
           <h2>Education</h2>
           <div class="small">
-            <strong>Noida Institute of Engineering & Technology (NIET)</strong><br/>B.Tech (Hons) in Civil Engineering — 2018–2022<br/>CGPA: 8.0 (First Division with Honours)
+            <strong>Noida Institute of Engineering & Technology (NIET)</strong><br/>B.Tech (Hons) in Civil Engineering — 2018–2022<br/>CGPA: 8.0
           </div>
         </div>
 
         <div class="card">
-          <h2>Certifications (short)</h2>
-          <div class="small">
-            Microsoft Certified: Azure Administrator Associate — 2024<br/>
-            Oracle Certified Associate (OCA)<br/>
-            6 NPTEL Certifications — IITs<br/>
-            4 Oracle Certifications
-          </div>
+          <h2>Social</h2>
+          <ul class="social-links" style="display:flex;gap:12px;padding:0;margin:10px 0 0 0;list-style:none;">
+            <li><a href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li>
+            <li><a href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+          </ul>
         </div>
       </aside>
     </main>
 
-    <footer>
-      Built for recruiters & engineering leads · Accessible · Mobile-first · Dark/Light mode · Smooth animations · Interactive hovers · Scroll progress bar · Back to Top · Designed to align with LinkedIn & Resume content.
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <p style="margin:0;color:var(--muted)">&copy; 2025 Harsh Shukla. All Rights Reserved.</p>
+        <ul class="social-links" role="list" style="display:flex;gap:12px;padding:0;margin:0;list-style:none;">
+          <li><a href="https://github.com/HarshShukla-git" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/harsh-shukla-06262220b/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/bramhwansi_harsh_shukla/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
     </footer>
   </div>
 
+  <!-- SCRIPT: interactions -->
   <script>
+    // theme persist & toggle
+    (function(){
+      const saved = localStorage.getItem('theme');
+      if(saved === 'light'){ document.body.setAttribute('data-theme','light'); }
+    })();
+
     function toggleTheme(){
-      // uses data-theme on <body> to match CSS [data-theme="light"]
-      if(document.body.getAttribute("data-theme") === "light"){
-        document.body.removeAttribute("data-theme");
+      if(document.body.getAttribute('data-theme') === 'light'){
+        document.body.removeAttribute('data-theme');
         localStorage.removeItem('theme');
       } else {
-        document.body.setAttribute("data-theme","light");
+        document.body.setAttribute('data-theme','light');
         localStorage.setItem('theme','light');
       }
     }
 
-    // restore theme from localStorage
-    (function(){
-      if(localStorage.getItem('theme') === 'light'){
-        document.body.setAttribute('data-theme','light');
-      }
-    })();
-
+    // IntersectionObserver for animation
     const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.card').forEach(c => observer.observe(c));
+
+    // progress + back-to-top
+    const progressBar = document.getElementById('progress-bar');
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      const docH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const pct = (window.scrollY / (docH <= 0 ? 1 : docH)) * 100;
+      progressBar.style.width = pct + '%';
+      backBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+    function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+
+    // mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.getElementById('primary-navigation');
+    if(navToggle && navList){
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navList.classList.toggle('open');
       });
-    },{threshold:0.1});
+    }
 
-    // observe all cards
-    document.querySelectorAll('.card').forEach(card=>{
-      observer.observe(card);
-    });
-
-    window.addEventListener('scroll',()=>{
-      const docHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-      const scrolled=(window.scrollY/docHeight)*100;
-      document.getElementById('progress-bar').style.width=scrolled+"%";
-
-      const btn=document.getElementById('back-to-top');
-      if(window.scrollY>300){btn.style.display='flex';}else{btn.style.display='none';}
-    });
-
-    function scrollToTop(){
-      window.scrollTo({top:0,behavior:'smooth'});
+    // contact form demo behaviour (prevent real submit)
+    const form = document.querySelector('.contact-form');
+    if(form){
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thanks — message captured (demo). Replace with actual form endpoint when ready.');
+        form.reset();
+      });
     }
   </script>
 </body>
